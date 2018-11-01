@@ -45,7 +45,7 @@ spec:
       serviceAccountName: nsx-node-agent-svc-account
       containers:
         - name: nsx-node-agent
-          image: harbor-tenant-01.sg.lab/singapore-infra/nsx-ncp:2.3.0
+          image: harbor-tenant-01.sg.lab/singapore-infra/nsx-ncp:2.2.1
           imagePullPolicy: IfNotPresent
           command: ["start_node_agent"]
           livenessProbe:
@@ -81,7 +81,7 @@ spec:
             mountPath: /host/proc
             readOnly: true
         - name: nsx-kube-proxy
-          image: harbor-tenant-01.sg.lab/singapore-infra/nsx-ncp:2.3.0
+          image: harbor-tenant-01.sg.lab/singapore-infra/nsx-ncp:2.2.1
           imagePullPolicy: IfNotPresent
           command: ["start_kube_proxy"]
           livenessProbe:
